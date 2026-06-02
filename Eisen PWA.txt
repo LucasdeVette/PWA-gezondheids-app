@@ -1,0 +1,11 @@
+Eisen PWA
+
+✅ Responsive zijn
+✅ Mobile-first zijn
+✅ Gegevens opslaan in LocalStorage
+✅ Gegevens tonen
+✅ Resetfunctie hebben
+✅ Manifest hebben
+✅ Service worker hebben
+✅ Installeerbaar zijn
+✅ Offline werken
