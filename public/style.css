@@ -1,0 +1,76 @@
+body {
+    background-color: #d4caca;
+    margin: 0px;
+}
+main {
+    padding: 20px;
+}
+
+.TitleDashboard {
+    text-align: center;
+    font-size: 200%;
+    color: #646464;
+    font-family: 'inter', sans-serif;
+}
+.NavigatieBar ul{
+    list-style-type: none;
+    background-color: #b5abab;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+.NavigatieBar a {
+   color: #767171; 
+   text-decoration: none;
+   padding: 15px;
+   display: block;
+   text-align: center;
+}
+.NavigatieBar  a:hover{
+    background-color: #423e3e;
+}
+.NavigatieBar li{
+    display: inline-block;
+    
+}
+.p1 {
+    text-align: center;
+    font-size: 150%;
+    color: #646464;
+    font-family: 'inter', sans-serif;
+}
+.slaaptrackerbutton {
+    background-color: #6d4d92;
+    border-radius: 10px;
+    color: rgb(19, 18, 18);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.slaaptrackerbutton a {
+    color: black;
+    text-decoration: none;
+    
+    
+}
+
+.TitelSlaaptracker {
+    text-align: center;
+    font-size: 200%;
+    color: #302d2d;
+    font-family: 'inter', sans-serif;
+}
+
+hr {
+    border: 1px solid #b5abab;
+}
+.NavigatieBar {
+    font-size: 60%;
+}
+.p1 {
+    margin-top: -20px;
+}
+
+
