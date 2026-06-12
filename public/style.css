@@ -72,5 +72,71 @@ hr {
 .p1 {
     margin-top: -20px;
 }
+.Datumform {
+    display:flex; 
+    gap: 10px;
+}
+.Date {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #b5abab;
+    height: 10px;
+    width: 80px;
+    margin-top: 15px;
+}
+.StartTime {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #b5abab;
+    height: 10px;
+    width: 80px;
+    margin-top: 15px;
+}
+.VanTime {
+    display: flex;
+    gap: 10px;
+}
+.EndTime {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #b5abab;
+    height: 10px;
+    width: 80px;
+    margin-top: 15px;
+}
+.TotTime {
+    display: flex;
+    gap: 10px;
+}
+.Tijdform {
+    display: flex;
+    gap: 10px;
+}
+
+.Notitieform {
+    display: flex;
+    gap: 10px;
+}
+.Notitie {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #b5abab;
+    height: 50px;
+    width: px;
+    margin-top: 15px;
+}
+.Notitieform {
+    display: flex;
+    gap: 10px;
+}
+.submitbutton {
+    background-color: #6d4d92;
+    border-radius: 10px;
+    color: rgb(19, 18, 18);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
 
 

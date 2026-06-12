@@ -22,6 +22,34 @@
 </header>
 <main>
     <p class="p1">Nieuwe registratie toevoegen</p>
+
+        <form id="SlaapTrackerForm">
+
+            <div class="Datumform">
+            <p>Datum:</p>
+            <input class="Date" type="date" id="date" placeholder="Datum"  required>
+            </div>
+
+            <div class="Tijdform">
+            <div class="VanTime">
+            <p>Van:</p>
+            <input class="StartTime" type="time" id="startTime" placeholder="Tijd"  required>
+            </div>
+
+            <div class="TotTime">
+            <p>Tot:</p>
+            <input class="EndTime" type="time" id="endTime" placeholder="Tijd" id="eindtijd" required>
+            </div>
+            </div>
+
+            <div class="Notitieform">
+            <p>Notitie:</p>
+            <input class="Notitie" type="text" id="notitie" placeholder="Notitie">
+            </div>
+           <br> <button class="submitbutton" type="submit">Toevoegen</button>
+        </form>
 </main>
+<script src="app.js"></script>
 </body>
+
 </html>
