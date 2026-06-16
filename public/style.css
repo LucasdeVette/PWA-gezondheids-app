@@ -137,6 +137,30 @@ hr {
     padding: 10px 20px;
     display: inline-block;
 }
+.registratie-Card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
+}
 
+.Resetbutton {
+    background-color: #6d4d92;
+    border-radius: 10px;
+    color: rgb(19, 18, 18);
+    text-decoration: none;
+    padding: 2.5px 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.Title_Instellingen {
+  text-align: center;
+    font-size: 200%;
+    color: #646464;
+    font-family: 'inter', sans-serif;  
+}
 
 

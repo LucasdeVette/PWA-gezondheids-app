@@ -2,6 +2,9 @@
 //variabele 
 const SlaapTrackerForm = document.getElementById("SlaapTrackerForm");
 const OverzichtSlaapRegistraties = document.getElementById("OverzichtSlaapRegistraties");
+const ResetButton = document.getElementById("ResetButton");
+const TaalButton = document.getElementById("TaalButton")
+
 
 //Dit is een if statement die variabele, objecten en arrays aanmaakt zodat het formulier werkt en het in local storage opgeslagen kan worden
 if (SlaapTrackerForm) {
@@ -49,21 +52,61 @@ if (SlaapTrackerForm) {
     });
 }
 
+//Dit checkt of het de section "OverzichtSlaapRegistraties" vind en als dat is stuurt het een console.log
 if (OverzichtSlaapRegistraties) {
     console.log("OverzichtSlaapRegistraties is geladen");
 
+//Dit haalt de lijst van registraties op uit local storage zodat het gebruikt kan worden voor het tonen van de registraties op de website
     const registraties = JSON.parse(localStorage.getItem("slaapregistraties")) || [];
     console.log(registraties);
-    console.log(registraties[0]);
-    console.log(registraties[0].date);
-    console.log(registraties[0].startTime);
-
-    OverzichtSlaapRegistraties.innerHTML = `
+ 
+ //Dit is een loop die telkens een registratie uit de array neemt en het in het html element zet   
+    for (let i = 0; i < registraties.length; i++) {
+        OverzichtSlaapRegistraties.innerHTML += `
     <div class="registratie-Card">
-    <p>Datum: ${registraties[0].date}</p>
-    <p>Van: ${registraties[0].startTime}</p>
-    <p>Tot: ${registraties[0].endTime}</p>
-    <p>Notitie: ${registraties[0].notitie}</p>
+    <p>Datum: ${registraties[i].date}</p>
+    <p>Van: ${registraties[i].startTime}</p>
+    <p>Tot: ${registraties[i].endTime}</p>
+    <p>Notitie: ${registraties[i].notitie}</p>
     </div>
     `;
+    }
+
+
+}
+
+//resetbutton die alle registraties verwijdert uit localstorage
+if (ResetButton) {
+    ResetButton.addEventListener("click", function(){
+
+       const bevestiging = confirm("Weet je zeker dat je alle registraties wilt verwijderen? Dit kan niet ongedaan gemaakt worden.");
+        
+        if (bevestiging) {
+            localStorage.removeItem("slaapregistraties");
+            alert("Alle registraties zijn verwijderd!");
+            location.reload();
+        };
+    });
+};
+
+//taalbutton dat de taal van nederlands naar engels kan switchen
+let language = "nl";
+const Title_Dashboard = "Title_Dashboard"
+
+if (TaalButton) {
+    TaalButton.addEventListener("click", function(){
+        if (language === "nl") {
+            Title_Dashboard.textContent = "Welcome User";
+            Title_instellingenjs.textContent = "Settings";
+            language = "en";
+            
+        } else {
+            Title_Dashboard.textContent = "Welkom Gebruiker";
+            Title_instellingenjs.textContent = "Instellingen";
+            language = "nl";
+        }
+
+
+
+    })
 }
