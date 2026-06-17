@@ -4,7 +4,7 @@ const SlaapTrackerForm = document.getElementById("SlaapTrackerForm");
 const OverzichtSlaapRegistraties = document.getElementById("OverzichtSlaapRegistraties");
 const ResetButton = document.getElementById("ResetButton");
 const TaalButton = document.getElementById("TaalButton")
-
+//
 
 //Dit is een if statement die variabele, objecten en arrays aanmaakt zodat het formulier werkt en het in local storage opgeslagen kan worden
 if (SlaapTrackerForm) {
@@ -51,6 +51,7 @@ if (SlaapTrackerForm) {
 
     });
 }
+//
 
 //Dit checkt of het de section "OverzichtSlaapRegistraties" vind en als dat is stuurt het een console.log
 if (OverzichtSlaapRegistraties) {
@@ -74,6 +75,7 @@ if (OverzichtSlaapRegistraties) {
 
 
 }
+//
 
 //resetbutton die alle registraties verwijdert uit localstorage
 if (ResetButton) {
@@ -88,25 +90,52 @@ if (ResetButton) {
         };
     });
 };
+//
 
 //taalbutton dat de taal van nederlands naar engels kan switchen
-let language = "nl";
-const Title_Dashboard = "Title_Dashboard"
+let language = localStorage.getItem("LanguageLocalStorage") || "nl";
+const Title_Dashboard = document.getElementById("Title_Dashboard");
+const Title_instellingenjs = document.getElementById("Title_instellingenjs");
+
+
+if (language === "en") {
+    if(Title_Dashboard){
+        Title_Dashboard.textContent = "Welcome User";
+    }
+    if(Title_instellingenjs){
+        Title_instellingenjs.textContent = "Settings";
+    }
+}
 
 if (TaalButton) {
     TaalButton.addEventListener("click", function(){
         if (language === "nl") {
-            Title_Dashboard.textContent = "Welcome User";
-            Title_instellingenjs.textContent = "Settings";
+            
+            //Dashboard pagina//
+            if(Title_Dashboard){
+                Title_Dashboard.textContent = "Welcome User";}
+            
+            //Instellingen pagina//
+            if(Title_instellingenjs){
+                Title_instellingenjs.textContent = "Settings";
+    }
+            
+            //Opslaan localstorage//
             language = "en";
+            localStorage.setItem("LanguageLocalStorage", language);
             
         } else {
-            Title_Dashboard.textContent = "Welkom Gebruiker";
-            Title_instellingenjs.textContent = "Instellingen";
+            if (Title_Dashboard){
+            Title_Dashboard.textContent = "Welkom Gebruiker";}
+
+            if (Title_instellingenjs)
+                {Title_instellingenjs.textContent = "Instellingen";}
             language = "nl";
+            localStorage.setItem("LanguageLocalStorage", language);
         }
 
 
 
     })
 }
+//
