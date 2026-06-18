@@ -1,22 +1,20 @@
 body {
     background-color: #d4caca;
-    margin: 0px;
-}
-main {
-    padding: 20px;
+    margin: 0%;
 }
 
 .TitleDashboard {
     text-align: center;
-    font-size: 200%;
     color: #646464;
     font-family: 'inter', sans-serif;
+    font-size: clamp(20px, 6vw, 48px);
 }
+
 .NavigatieBar ul{
     list-style-type: none;
     background-color: #b5abab;
-    padding: 0px;
-    margin: 0px;
+    padding: 0%;
+    margin: 0%;
     overflow: hidden;
     text-align: center;
     
@@ -24,7 +22,8 @@ main {
 .NavigatieBar a {
    color: #767171; 
    text-decoration: none;
-   padding: 15px;
+   padding: clamp(13px, 3vw, 30px);
+   font-size: clamp(7px, 1vw, 100px);
    display: block;
    text-align: center;
 }
@@ -37,32 +36,70 @@ main {
 }
 .p1 {
     text-align: center;
-    font-size: 150%;
+    font-size: clamp(15px, 3vw, 40px);
     color: #646464;
     font-family: 'inter', sans-serif;
+    
+}
+.functies {
+    margin-left:3vw;
+    color: #292222;
+    font-family: 'inter', sans-serif;
+    font-size: clamp(15px, 4vw, 40px);
+}
+.h6css {
+    margin-left: clamp(2vw, 3.5vw, 5vw);
+    font-size: clamp(1vw, 2vw, 3vw);
+    margin-top: -10px;
 }
 .slaaptrackerbutton {
     background-color: #6d4d92;
-    border-radius: 10px;
-    color: rgb(19, 18, 18);
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-}
-.slaaptrackerbutton a {
+    border-radius: 1rem;
     color: black;
     text-decoration: none;
-    
-    
+    padding: clamp(10px, 3vw, 20px);
+    display: inline-block;
+    margin-left: 5%;
+    font-size: clamp(1px, 4vw, 15px);
+    margin-top: 0.5vw;
 }
 
-.TitelSlaaptracker {
+.TitleInstellingen {
     text-align: center;
-    font-size: 200%;
-    color: #302d2d;
+    color: #646464;
+    font-family: 'inter', sans-serif;
+    font-size: clamp(20px, 6vw, 48px);
+}
+.Taal {
+    margin-top: 4rem;
+    margin-left: 1rem;
+    font-size: clamp(15px, 4vw, 40px);
+    color: #292222;
     font-family: 'inter', sans-serif;
 }
-
+.Taal_Button {
+   background-color: #686669;
+    border-radius: 1rem;
+    color: black;
+    text-decoration: none;
+    padding: clamp(1px, 5px, 10px);
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: clamp(1px, 4vw, 15px);
+    margin-top: 0.5vw;
+}
+.TitelSlaaptracker {
+   text-align: center;
+    color: #646464;
+    font-family: 'inter', sans-serif;
+    font-size: clamp(20px, 6vw, 48px);
+}
+.Alleregistraties {
+    margin-left: 1rem;
+    font-size: clamp(15px, 4vw, 40px);
+    color: #292222;
+    font-family: 'inter', sans-serif;
+}
 hr {
     border: 1px solid #b5abab;
 }
@@ -70,7 +107,11 @@ hr {
     font-size: 60%;
 }
 .p1 {
-    margin-top: -20px;
+    margin-left:3vw;
+    color: #292222;
+    font-family: 'inter', sans-serif;
+    font-size: clamp(15px, 4vw, 40px);
+
 }
 .Datumform {
     display:flex; 
@@ -80,9 +121,9 @@ hr {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #b5abab;
-    height: 10px;
-    width: 80px;
-    margin-top: 15px;
+    margin-top: 10px;
+    height: 20px;
+    width: 100px;
 }
 .StartTime {
     padding: 5px;
@@ -137,6 +178,11 @@ hr {
     padding: 10px 20px;
     display: inline-block;
 }
+.slaaptrackerform {
+float: left;
+margin-left: 5vw;
+
+}
 .registratie-Card {
     margin-bottom: 20px;
     padding: 15px;
@@ -148,13 +194,16 @@ hr {
 
 .Resetbutton {
     background-color: #6d4d92;
-    border-radius: 10px;
+    border-radius: 5vw;
     color: rgb(19, 18, 18);
     text-decoration: none;
-    padding: 2.5px 5px;
+    padding: clamp(1vw 2vw, 3vw);
     display: inline-block;
-    margin-bottom: 20px;
+    font-size: clamp(10px, 10px, 30px);
+    margin-left: 5%
 }
+
+
 
 .Title_Instellingen {
   text-align: center;
@@ -162,5 +211,7 @@ hr {
     color: #646464;
     font-family: 'inter', sans-serif;  
 }
-
+.Languageinstellingen {
+    margin-top: -30px;
+}
 

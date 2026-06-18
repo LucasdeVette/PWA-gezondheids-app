@@ -10,43 +10,43 @@
 <header>
     <nav class="NavigatieBar">
         <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="overzicht_slaaptracker.html">Overzicht slaaptracker</a></li>
-            <li><a href="instellingen.html">Instellingen</a></li>
+            <li><a href="index.html"><p id="DashboardLink">Dashboard</p></a></li>
+            <li><a href="overzicht_slaaptracker.html"><p id="LinkOverzicht">Overzicht slaaptracker</p></a></li>
+            <li><a href="instellingen.html"><p id="SettingsLink">Instellingen</p></a></li>
             
         </ul>
     </nav>
     <hr>
-    <h1 class="TitelSlaaptracker">Slaaptracker</h1>
+    <h1 class="TitelSlaaptracker" id="SlaapTrackerTitel">Slaaptracker</h1>
     <hr>
 </header>
 <main>
-    <p class="p1">Nieuwe registratie toevoegen</p>
+    <p class="p1" id="P1">Nieuwe registratie toevoegen</p>
 
-        <form id="SlaapTrackerForm">
+        <form id="SlaapTrackerForm" class="slaaptrackerform">
 
             <div class="Datumform">
-            <p>Datum:</p>
+            <p id="DatumForm">Datum:</p>
             <input class="Date" type="date" id="date" placeholder="Datum"  required>
             </div>
 
             <div class="Tijdform">
             <div class="VanTime">
-            <p>Van:</p>
+            <p id="VanForm">Van:</p>
             <input class="StartTime" type="time" id="startTime" placeholder="Tijd"  required>
             </div>
 
             <div class="TotTime">
-            <p>Tot:</p>
+            <p id="TotForm">Tot:</p>
             <input class="EndTime" type="time" id="endTime" placeholder="Tijd" id="eindtijd" required>
             </div>
             </div>
 
             <div class="Notitieform">
-            <p>Notitie:</p>
-            <input class="Notitie" type="text" id="notitie" placeholder="Notitie">
+            <p id="NotitieForm">Notitie:</p>
+            <input class="Notitie" type="text" id="notitie" placeholder="Notation">
             </div>
-           <br> <button class="submitbutton" type="submit">Toevoegen</button>
+           <br> <button class="submitbutton" type="submit" id="SubmitButton">Toevoegen</button>
         </form>
 </main>
 <script src="app.js"></script>

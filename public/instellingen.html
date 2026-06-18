@@ -10,9 +10,9 @@
 <header>
      <nav class="NavigatieBar">
         <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="overzicht_slaaptracker.html">Overzicht slaaptracker</a></li>
-            <li><a href="instellingen.html">Instellingen</a></li>
+            <li><a href="index.html"><p id="DashboardLink">Dashboard</p></a></li>
+            <li><a href="overzicht_slaaptracker.html"><p id="LinkOverzicht">Overzicht slaaptracker</p></a></li>
+            <li><a href="instellingen.html"><p id="SettingsLink">Instellingen</p></a></li>
             
         </ul>
     </nav>
@@ -23,10 +23,12 @@
     <hr>
 </header>
 <main>
-    <h2>Language</h2>
-    <button id="TaalButton">
+    <div class="Languageinstellingen">
+    <h2 id="taal" class="Taal">Taal</h2>
+    <button id="TaalButton" class="Taal_Button">
         English
     </button>
+</div>
 </main>
 
     <script src="app.js"></script>

@@ -65,10 +65,17 @@ if (OverzichtSlaapRegistraties) {
     for (let i = 0; i < registraties.length; i++) {
         OverzichtSlaapRegistraties.innerHTML += `
     <div class="registratie-Card">
-    <p>Datum: ${registraties[i].date}</p>
-    <p>Van: ${registraties[i].startTime}</p>
-    <p>Tot: ${registraties[i].endTime}</p>
-    <p>Notitie: ${registraties[i].notitie}</p>
+    <p><b class="DatumIdClass">Datum:</b></p> 
+    <p>${registraties[i].date}</p>
+    
+    <p><b class="VanIdClass">Van:</b></p>
+    <p>${registraties[i].startTime}</p>
+    
+    <p><b class="TotIdClass">Tot:</b></p> 
+    <p>${registraties[i].endTime}</p>
+    
+    <p><b class="NotitieIdClass">Notitie:</b></p>
+    <p>${registraties[i].notitie}</p>
     </div>
     `;
     }
@@ -93,10 +100,25 @@ if (ResetButton) {
 //
 
 //taalbutton dat de taal van nederlands naar engels kan switchen
+//variabele van de html elementen
 let language = localStorage.getItem("LanguageLocalStorage") || "nl";
 const Title_Dashboard = document.getElementById("Title_Dashboard");
 const Title_instellingenjs = document.getElementById("Title_instellingenjs");
-
+const AlleFuncties = document.getElementById("AlleFuncties");
+const Future = document.getElementById("Future");
+const SlaapTrackerButton = document.getElementById("SlaapTrackerButton");
+const Title_Overzicht = document.getElementById("Title_Overzicht");
+const AllRegistrations = document.getElementById("AllRegistrations");
+const taal = document.getElementById("taal");
+const SlaapTrackerTitel = document.getElementById("SlaapTrackerTitel");
+const P1 = document.getElementById("P1");
+const DatumForm = document.getElementById("DatumForm");
+const VanForm = document.getElementById("VanForm");
+const TotForm = document.getElementById("TotForm");
+const NotitieForm = document.getElementById("NotitieForm");
+const SubmitButton = document.getElementById("SubmitButton");
+const LinkOverzicht = document.getElementById("LinkOverzicht");
+const SettingsLink = document.getElementById("SettingsLink");
 
 if (language === "en") {
     if(Title_Dashboard){
@@ -105,33 +127,225 @@ if (language === "en") {
     if(Title_instellingenjs){
         Title_instellingenjs.textContent = "Settings";
     }
+    if (AlleFuncties){
+        AlleFuncties.textContent = "All Functions";
+    }
+    if (Future) {
+        Future.textContent = "(More functions will be added soon!)"
+    }
+    if (SlaapTrackerButton) {
+        SlaapTrackerButton.textContent = "Sleeptracker"
+    }
+    if (Title_Overzicht) {
+        Title_Overzicht.textContent = "Overview Sleeptracker"
+    }
+    if (ResetButton) {
+        ResetButton.textContent = "Reset All"
+    }
+    if (AllRegistrations) {
+        AllRegistrations.textContent = "All Registrations"
+    }
+    if (taal) {
+        taal.textContent = "Language"
+    }
+    if (SlaapTrackerTitel) {
+        SlaapTrackerTitel.textContent = "SleepTracker"
+    }
+    if (P1) {
+        P1.textContent = "Add a new registration"
+    }
+    if (DatumForm) {
+        DatumForm.textContent = "Date:"
+    }
+    if (VanForm) {
+        VanForm.textContent = "From:"
+    }
+    if (TotForm) {
+        TotForm.textContent = "Till:"
+    }
+    if (NotitieForm) {
+        NotitieForm.textContent = "Notation"
+    }
+    if (SubmitButton) {
+        SubmitButton.textContent = "Submit"
+    }
+    if (LinkOverzicht) {
+        LinkOverzicht.textContent = "All Registrations"
+    }
+    if (SettingsLink) {
+        SettingsLink.textContent = "Settings"
+    }
+    
+
+   
+    //innerhtmltranslate
+    document.querySelectorAll(".DatumIdClass").forEach(function(label) {
+    label.textContent = "Date:";});
+
+    document.querySelectorAll(".VanIdClass").forEach(function(label) {
+    label.textContent = "From:";});
+    
+   
+    document.querySelectorAll(".TotIdClass").forEach(function(label) {
+    label.textContent = "Till:";});
+
+    document.querySelectorAll(".NotitieIdClass").forEach(function(label) {
+    label.textContent = "Notation";});
 }
 
 if (TaalButton) {
     TaalButton.addEventListener("click", function(){
         if (language === "nl") {
             
-            //Dashboard pagina//
+           
             if(Title_Dashboard){
                 Title_Dashboard.textContent = "Welcome User";}
             
-            //Instellingen pagina//
-            if(Title_instellingenjs){
-                Title_instellingenjs.textContent = "Settings";
-    }
             
+            if(Title_instellingenjs){
+                Title_instellingenjs.textContent = "Settings";}
+            
+            if (AlleFuncties){
+                AlleFuncties.textContent = "All Functions";}
+            
+            if (Future) {
+                Future.textContent = "(More functions will be added soon!)"}
+
+            if (SlaapTrackerButton) {
+            SlaapTrackerButton.textContent = "Sleeptracker"}
+            
+            if (Title_Overzicht) {
+                Title_Overzicht.textContent = "Overview Sleeptracker"}
+
+            if (ResetButton) {
+                ResetButton.textContent = "Reset All"}
+
+            if (AllRegistrations) {
+                AllRegistrations.textContent = "All Registrations"}
+            
+            if (taal) {
+                taal.textContent = "Language"}
+
+            if (SlaapTrackerTitel) {
+                SlaapTrackerTitel.textContent = "SleepTracker"}
+
+            if (P1) {
+                P1.textContent = "Add a new registration"}
+
+            if (DatumForm) {
+                DatumForm.textContent = "Date:"}
+
+            if (VanForm) {
+                VanForm.textContent = "From:"}
+
+            if (TotForm) {
+                TotForm.textContent = "Till:"}
+
+            if (NotitieForm) {
+                NotitieForm.textContent = "Notation:"}
+
+            if (SubmitButton) {
+                SubmitButton.textContent = "Submit"}
+
+            if (LinkOverzicht) {
+                LinkOverzicht.textContent = "All Registrations"}
+
+            if (SettingsLink) {
+                SettingsLink.textContent = "Settings"}
+                
+            document.querySelectorAll(".DatumIdClass").forEach(function(label) {
+            label.textContent = "Date:";});
+
+            document.querySelectorAll(".VanIdClass").forEach(function(label) {
+            label.textContent = "From:";});
+    
+            document.querySelectorAll(".TotIdClass").forEach(function(label) {
+            label.textContent = "Till:";});
+
+            document.querySelectorAll(".NotitieIdClass").forEach(function(label) {
+            label.textContent = "Notation";});
+            
+  
+
             //Opslaan localstorage//
             language = "en";
             localStorage.setItem("LanguageLocalStorage", language);
             
+            
+
         } else {
             if (Title_Dashboard){
             Title_Dashboard.textContent = "Welkom Gebruiker";}
 
             if (Title_instellingenjs)
                 {Title_instellingenjs.textContent = "Instellingen";}
+           
+            if (AlleFuncties){
+                AlleFuncties.textContent = "Alle functies";}
+
+            if (Future) {
+                Future.textContent = "(More functions will be added soon!)"}
+            
+            if (SlaapTrackerButton) {
+            SlaapTrackerButton.textContent = "Slaaptracker"};
+
+            if (Title_Overzicht) {
+                Title_Overzicht.textContent = "Overzicht SlaapTracker"};
+            
+            if (ResetButton) {
+                ResetButton.textContent = "Reset alles"}
+                
+             if (AllRegistrations) {
+                AllRegistrations.textContent = "Alle Registraties"}
+             
+            if (taal) {
+                taal.textContent = "Taal"}
+
+            if (SlaapTrackerTitel) {
+                SlaapTrackerTitel.textContent = "SleepTracker"}
+            
+            if (P1) {
+                P1.textContent = "Add a new registration"}
+            
+            if (DatumForm) {
+                DatumForm.textContent = "Date:"}
+
+            if (VanForm) {
+                VanForm.textContent = "From:"}
+
+            if (TotForm) {
+                TotForm.textContent = "Till:"}
+
+            if (NotitieForm) {
+                NotitieForm.textContent = "Notation"}
+
+            if (SubmitButton) {
+                SubmitButton.textContent = "Versturen"}
+            
+            if (LinkOverzicht) {
+                LinkOverzicht.textContent = "Overzicht Registraties"}
+                
+            if (SettingsLink) {
+                SettingsLink.textContent = "Instellingen"}
+
+             document.querySelectorAll(".DatumIdClass").forEach(function(label) {
+            label.textContent = "Datum:";});
+
+            document.querySelectorAll(".VanIdClass").forEach(function(label) {
+            label.textContent = "Van:";});
+    
+            document.querySelectorAll(".TotIdClass").forEach(function(label) {
+            label.textContent = "Tot:";});
+
+            document.querySelectorAll(".NotitieIdClass").forEach(function(label) {
+            label.textContent = "Notitie";});
+             
+             
+            //opslaan localstorage
             language = "nl";
             localStorage.setItem("LanguageLocalStorage", language);
+        
+            
         }
 
 
