@@ -1,15 +1,11 @@
-// Stap 1: Express inladen
-const express = require('express');
-const app     = express();
-const PORT    = 3000;
+const express = require("express");
+const path = require("path");
 
-// Stap 2: Een route maken
-// Wanneer iemand naar "/" gaat, stuur je "Hello World!" terug
-app.get('/', (req, res) => {
-    res.send('<h1>Hello World! 👋</h1><p>Mijn eerste server werkt goed!</p>');
-});
+const app = express();
+const PORT = 3000;
 
-// Stap 3: Server starten
+app.use(express.static(path.join(__dirname, "public")));
+
 app.listen(PORT, () => {
-    console.log(`✅ Server draait op http://localhost:${PORT}`);
+    console.log(`Server draait op http://localhost:${PORT}`);
 });

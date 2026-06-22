@@ -23,7 +23,7 @@ body {
    color: #767171; 
    text-decoration: none;
    padding: clamp(13px, 3vw, 30px);
-   font-size: clamp(7px, 1vw, 100px);
+   font-size: clamp(7px, 10px, 50px);
    display: block;
    text-align: center;
 }
@@ -179,8 +179,10 @@ hr {
     display: inline-block;
 }
 .slaaptrackerform {
-float: left;
-margin-left: 5vw;
+display:flex;
+flex-direction: column;
+align-items: center;
+
 
 }
 .registratie-Card {
