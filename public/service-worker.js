@@ -1,5 +1,7 @@
+//variabele voor de cache
 const CACHE_NAME = "healthflow-cache-v1";
 
+//variabele voor de files die in de cache komen te staan
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
@@ -12,6 +14,7 @@ const FILES_TO_CACHE = [
     "/Images/HealthFlow.png"
 ];
 
+//Maakt cache aan en voegt offline files hieraan toe en installeert de app
 self.addEventListener("install", function(event) {
     event.waitUntil(
         caches.open(CACHE_NAME).then(function(cache) {
